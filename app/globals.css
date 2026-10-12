@@ -212,7 +212,7 @@ pre {
 }
 
 .hero-heading {
-  font-size: clamp(1.7rem, 3.6vw, 3rem);
+  font-size: clamp(2.15rem, 4.8vw, 3.85rem);
   font-weight: 800;
   line-height: 1.1;
   color: hsl(220, 45%, 18%);
@@ -915,6 +915,6 @@ pre {
   .nav-link { font-size: 0.9375rem; }
   .hero-inner { padding-top: calc(104px + 1rem); }
   .footer-grid { grid-template-columns: 1fr; }
-  .hero-heading { font-size: 1.7rem; }
+  .hero-heading { font-size: 2rem; }
   .portfolio-section { padding-block: 3.5rem; }
 }
