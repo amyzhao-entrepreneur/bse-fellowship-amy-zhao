@@ -47,9 +47,9 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-  headline: 'My name is Amy. Welcome to my page!',
+  headline: ['My name is Amy.', 'Welcome to my page!'],
   photo: '/headshot.jpg',
-  bio: 'I am a computer science student at UCLA. I built Motivate Me, a daily-quotes iOS app on the App Store, founded Trailblazer Tutoring, and write middle-grade and young adult books.',
+  bio: 'I built Motivate Me, a daily-quotes iOS app on the App Store, founded a six-figure business called Trailblazer Tutoring, and love the startup community.',
 };
 
 export interface EducationEntry {

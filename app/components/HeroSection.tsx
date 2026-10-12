@@ -6,7 +6,11 @@ export function HeroSection() {
       <div className="hero-inner">
         {/* Left: text */}
         <div className="hero-text">
-          <h1 className="hero-heading">{HERO.headline}</h1>
+          <h1 className="hero-heading">
+            {HERO.headline.map((line) => (
+              <span key={line} className="hero-heading-line">{line}</span>
+            ))}
+          </h1>
           <p className="hero-sub">{HERO.bio}</p>
         </div>
 
