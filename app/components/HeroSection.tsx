@@ -1,68 +1,12 @@
 import { PERSON, HERO } from '@/app/config';
 
-/* Colored squares that arc across the hero (blue → purple → pink)
-   Each square: left/top as % of hero, size in px, rotation in deg,
-   CSS HSL color, animation duration, animation delay */
-const SQUARES = [
-  { l: 53, t: 84, s: 15, r: 28,  c: 'hsl(242,66%,52%)', dur: 3.4, del: 0.0 },
-  { l: 55, t: 76, s: 21, r:-38,  c: 'hsl(246,67%,53%)', dur: 2.9, del: 0.4 },
-  { l: 57, t: 82, s: 13, r: 52,  c: 'hsl(250,67%,53%)', dur: 3.8, del: 0.8 },
-  { l: 60, t: 73, s: 19, r:-22,  c: 'hsl(254,68%,53%)', dur: 3.1, del: 0.2 },
-  { l: 59, t: 66, s: 17, r: 43,  c: 'hsl(258,68%,54%)', dur: 4.0, del: 0.6 },
-  { l: 63, t: 70, s: 23, r:-47,  c: 'hsl(263,69%,54%)', dur: 3.3, del: 1.0 },
-  { l: 65, t: 62, s: 15, r: 32,  c: 'hsl(268,70%,54%)', dur: 2.7, del: 0.3 },
-  { l: 68, t: 65, s: 19, r:-28,  c: 'hsl(274,72%,55%)', dur: 3.6, del: 0.7 },
-  { l: 67, t: 57, s: 17, r: 58,  c: 'hsl(280,74%,55%)', dur: 3.2, del: 0.1 },
-  { l: 71, t: 60, s: 13, r:-42,  c: 'hsl(286,76%,56%)', dur: 4.1, del: 0.5 },
-  { l: 70, t: 52, s: 21, r: 22,  c: 'hsl(292,78%,56%)', dur: 3.0, del: 0.9 },
-  { l: 73, t: 55, s: 15, r:-32,  c: 'hsl(298,80%,57%)', dur: 3.7, del: 0.2 },
-  { l: 75, t: 47, s: 19, r: 48,  c: 'hsl(303,82%,57%)', dur: 2.8, del: 0.6 },
-  { l: 77, t: 50, s: 13, r:-53,  c: 'hsl(308,83%,58%)', dur: 3.4, del: 1.1 },
-  { l: 79, t: 42, s: 17, r: 37,  c: 'hsl(312,84%,58%)', dur: 3.9, del: 0.3 },
-  { l: 81, t: 45, s: 21, r:-23,  c: 'hsl(316,85%,59%)', dur: 3.1, del: 0.7 },
-  { l: 82, t: 37, s: 15, r: 26,  c: 'hsl(320,86%,59%)', dur: 2.6, del: 0.0 },
-  { l: 84, t: 40, s: 11, r:-48,  c: 'hsl(323,87%,60%)', dur: 4.2, del: 0.4 },
-  { l: 86, t: 32, s: 19, r: 42,  c: 'hsl(326,87%,60%)', dur: 3.5, del: 0.8 },
-  { l: 88, t: 35, s: 13, r:-36,  c: 'hsl(328,88%,61%)', dur: 3.0, del: 1.2 },
-  { l: 87, t: 27, s: 17, r: 52,  c: 'hsl(330,88%,61%)', dur: 3.8, del: 0.2 },
-  { l: 90, t: 30, s: 21, r:-27,  c: 'hsl(330,88%,62%)', dur: 2.9, del: 0.6 },
-  { l: 89, t: 22, s: 15, r: 31,  c: 'hsl(332,88%,62%)', dur: 3.3, del: 1.0 },
-  { l: 92, t: 25, s: 11, r:-47,  c: 'hsl(334,88%,62%)', dur: 4.0, del: 0.4 },
-  { l: 91, t: 17, s: 17, r: 21,  c: 'hsl(336,88%,62%)', dur: 3.6, del: 0.8 },
-];
-
 export function HeroSection() {
   return (
     <section className="hero" aria-label="Introduction">
-      {/* Animated squares layer */}
-      <div className="squares-layer" aria-hidden="true">
-        {SQUARES.map((sq, i) => (
-          <div
-            key={i}
-            className="sq"
-            style={{
-              left: `${sq.l}%`,
-              top: `${sq.t}%`,
-              width: sq.s,
-              height: sq.s,
-              background: sq.c,
-              '--r': `${sq.r}deg`,
-              '--dur': `${sq.dur}s`,
-              '--delay': `${sq.del}s`,
-              animationDuration: `${sq.dur}s`,
-              animationDelay: `${sq.del}s`,
-            } as React.CSSProperties}
-          />
-        ))}
-      </div>
-
       <div className="hero-inner">
         {/* Left: text */}
         <div className="hero-text">
-          <h1 className="hero-heading">
-            {HERO.greeting}{' '}
-            <span style={{ color: 'var(--primary)' }}>{PERSON.fullName}</span>
-          </h1>
+          <h1 className="hero-heading">{HERO.headline}</h1>
           <p className="hero-sub">{HERO.bio}</p>
         </div>
 

@@ -47,9 +47,9 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-  greeting: "Hi, I'm",
+  headline: 'My name is Amy. Welcome to my page!',
   photo: '/headshot.jpg',
-  bio: "I'm a computer science student at UCLA. I built Motivate Me, a daily-quotes iOS app on the App Store, founded Trailblazer Tutoring, and write middle-grade and young adult books.",
+  bio: 'I am a computer science student at UCLA. I built Motivate Me, a daily-quotes iOS app on the App Store, founded Trailblazer Tutoring, and write middle-grade and young adult books.',
 };
 
 export interface EducationEntry {
@@ -209,7 +209,7 @@ export const SOCIAL_LINKS = [
 export const CONTACT = {
   email: ME.email,
   blurb:
-    "I'm a computer science student at UCLA. If you want to talk about Motivate Me, Trailblazer Tutoring, or a project you're working on, my inbox is open.",
+    "I am a computer science student at UCLA. If you want to talk about Motivate Me, Trailblazer Tutoring, or a project you're working on, my inbox is open.",
   links: [
     { label: 'Email', href: EMAIL_HREF, display: ME.email },
     { label: 'GitHub', href: GITHUB_URL, display: `github.com/${ME.github}` },
