@@ -592,6 +592,13 @@ pre {
   margin-bottom: 0.35rem;
 }
 
+.project-work-synopsis { margin-top: 0.5rem; }
+
+.tech-pill--genre {
+  color: var(--primary);
+  border-color: color-mix(in srgb, var(--primary) 35%, var(--pill-border));
+}
+
 .project-work .project-link { margin-top: 0.75rem; }
 
 @media (max-width: 720px) {

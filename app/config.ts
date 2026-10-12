@@ -164,6 +164,9 @@ export const EXPERIENCE: ExperienceEntry[] = [
 export interface ProjectWork {
   title: string;
   description: string;
+  synopsis: string;
+  genres: string[];
+  details: string[];
   href: string;
   linkLabel: string;
 }
@@ -209,12 +212,20 @@ export const PROJECTS: ProjectEntry[] = [
         title: 'The Last Nuclear Bomb',
         description:
           'My most recent graphic novel. Available in both English and Spanish.',
+        synopsis:
+          'In 2145, young Venga soldier Wilfred Hunter finds a hidden atomic bomb. Turning it in could earn a promotion, but cost countless lives. He must keep it from more war and hopes its energy can help humanity rebuild.',
+        genres: ['Dystopian', 'Science Fiction'],
+        details: ['Full-Colored', '60+ Pages'],
         href: 'https://www.amazon.com/Last-Nuclear-Bomb-Amy-Zhao/dp/0998029521',
         linkLabel: 'Amazon',
       },
       {
         title: 'Invasion of the Aliens',
         description: 'My most recent chapter book.',
+        synopsis:
+          'A school portal drops Pia onto a planet where fairies have fought invading aliens for nine years. An enemy wants powers she does not know she has. The fate of the galaxy rests with Pia and a handful of unlikely allies.',
+        genres: ['Fantasy', 'Adventure'],
+        details: ['340+ Pages'],
         href: 'https://www.amazon.com/Invasion-Aliens-Legends-Pinena-Zhao/dp/0998029548',
         linkLabel: 'Amazon',
       },

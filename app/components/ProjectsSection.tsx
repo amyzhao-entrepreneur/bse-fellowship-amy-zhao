@@ -19,6 +19,17 @@ export function ProjectsSection() {
                   <div key={work.title} className="project-work">
                     <p className="project-work-title">{work.title}</p>
                     <p className="project-desc">{work.description}</p>
+                    <p className="project-desc project-work-synopsis">{work.synopsis}</p>
+                    <div className="tech-pill-row">
+                      {work.genres.map((genre) => (
+                        <span key={genre} className="tech-pill tech-pill--genre">{genre}</span>
+                      ))}
+                    </div>
+                    <div className="tech-pill-row">
+                      {work.details.map((detail) => (
+                        <span key={detail} className="tech-pill">{detail}</span>
+                      ))}
+                    </div>
                     <a
                       href={work.href}
                       className="project-link"
