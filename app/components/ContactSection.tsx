@@ -4,7 +4,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="portfolio-section portfolio-section--last">
       <div className="section-header">
-        <span className="section-label">Say hello</span>
+        <span className="section-label">Feel free to say hello</span>
       </div>
 
       <div className="contact-layout">

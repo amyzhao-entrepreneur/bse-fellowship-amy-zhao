@@ -4,7 +4,7 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="portfolio-section">
       <div className="section-header">
-        <span className="section-label">Things I've built</span>
+        <span className="section-label">Some cool stuff I made!</span>
       </div>
 
       <div className="projects-grid">
