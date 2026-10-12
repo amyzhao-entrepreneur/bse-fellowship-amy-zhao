@@ -576,6 +576,28 @@ pre {
 }
 .project-link:hover { color: var(--accent); text-decoration: none; }
 
+.project-card--wide { grid-column: 1 / -1; }
+
+.project-works {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.project-work-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 0.35rem;
+}
+
+.project-work .project-link { margin-top: 0.75rem; }
+
+@media (max-width: 720px) {
+  .project-works { grid-template-columns: 1fr; }
+}
+
 /* ─── Education ─────────────────────────────────────────────────── */
 
 .edu-list { display: flex; flex-direction: column; gap: 1.25rem; }

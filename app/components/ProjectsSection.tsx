@@ -9,9 +9,28 @@ export function ProjectsSection() {
 
       <div className="projects-grid">
         {PROJECTS.map((project) => (
-          <div key={project.name} className="project-card">
+          <div key={project.name} className={project.works ? 'project-card project-card--wide' : 'project-card'}>
             <p className="project-name">{project.name}</p>
             <p className="project-desc">{project.description}</p>
+
+            {project.works && (
+              <div className="project-works">
+                {project.works.map((work) => (
+                  <div key={work.title} className="project-work">
+                    <p className="project-work-title">{work.title}</p>
+                    <p className="project-desc">{work.description}</p>
+                    <a
+                      href={work.href}
+                      className="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {work.linkLabel}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            )}
 
             <div className="tech-pill-row">
               {project.tech.map((t) => (

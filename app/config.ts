@@ -161,6 +161,13 @@ export const EXPERIENCE: ExperienceEntry[] = [
   },
 ];
 
+export interface ProjectWork {
+  title: string;
+  description: string;
+  href: string;
+  linkLabel: string;
+}
+
 export interface ProjectEntry {
   name: string;
   description: string;
@@ -168,6 +175,7 @@ export interface ProjectEntry {
   github?: string;
   live?: string;
   liveLabel?: string;
+  works?: ProjectWork[];
   featured: boolean;
 }
 
@@ -196,6 +204,21 @@ export const PROJECTS: ProjectEntry[] = [
     description:
       'Four chapter books and three graphic novels, written and independently published. Book sales have passed $15,000, alongside youth writing workshops with bookstores in six states.',
     tech: ['Writing', 'Publishing'],
+    works: [
+      {
+        title: 'The Last Nuclear Bomb',
+        description:
+          'My most recent graphic novel. Available in both English and Spanish.',
+        href: 'https://www.amazon.com/Last-Nuclear-Bomb-Amy-Zhao/dp/0998029521',
+        linkLabel: 'Amazon',
+      },
+      {
+        title: 'Invasion of the Aliens',
+        description: 'My most recent chapter book.',
+        href: 'https://www.amazon.com/Invasion-Aliens-Legends-Pinena-Zhao/dp/0998029548',
+        linkLabel: 'Amazon',
+      },
+    ],
     featured: false,
   },
 ];
