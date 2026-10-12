@@ -1,4 +1,21 @@
-import { PERSON, HERO } from '@/app/config';
+import { PERSON, HERO, CONTACT } from '@/app/config';
+
+function HeroBio() {
+  const linkedIn = CONTACT.links.find((link) => link.label === 'LinkedIn');
+  const email = CONTACT.links.find((link) => link.label === 'Email');
+  const [beforeLinkedIn, afterLinkedIn = ''] = HERO.bio.split('LinkedIn');
+  const [between, afterEmail = ''] = afterLinkedIn.split('email');
+
+  return (
+    <p className="hero-sub">
+      {beforeLinkedIn}
+      <a href={linkedIn?.href} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      {between}
+      <a href={email?.href}>email</a>
+      {afterEmail}
+    </p>
+  );
+}
 
 export function HeroSection() {
   return (
@@ -11,7 +28,7 @@ export function HeroSection() {
               <span key={line} className="hero-heading-line">{line}</span>
             ))}
           </h1>
-          <p className="hero-sub">{HERO.bio}</p>
+          <HeroBio />
         </div>
 
         <div className="hero-character">
